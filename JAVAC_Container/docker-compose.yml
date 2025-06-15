@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  javac:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: javac_container
+    volumes:
+      - ./workspace:/workspace
+    tty: true
+
+volumes:
+  workspace:

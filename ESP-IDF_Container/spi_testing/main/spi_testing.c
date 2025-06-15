@@ -5,7 +5,8 @@
 #include "driver/gpio.h"
 #include "esp_err.h"
 #include "esp_lcd_ili9341.h"
-#include "esp_lcd_touch_xpt2046.h"
+// #include "esp_lcd_touch_xpt2046.h"
+#include "xpt2046.h"
 
 // nPrevious pinouts for SPI testing on arduino ide.
 // // Define TFT display pins

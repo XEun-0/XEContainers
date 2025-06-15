@@ -1,0 +1,13 @@
+docker build -t unity-gui .
+
+xhost +local:docker  # allow Docker to access your X server
+
+docker run -it \
+    --rm \
+    --net=host \
+    -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v /dev/snd:/dev/snd \
+    -v $HOME/.Xauthority:/home/dev/.Xauthority \
+    -v $HOME/UnityProjects:/home/dev/UnityProjects \
+    unity-gui
