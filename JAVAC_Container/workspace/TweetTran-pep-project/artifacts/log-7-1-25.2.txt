@@ -1,0 +1,33 @@
+[INFO]
+[INFO] Results:
+[INFO]
+[ERROR] Failures:
+[ERROR]   CreateMessageTest.createMessageMessageTextBlank:97 expected:<400> but was:<200>
+[ERROR]   CreateMessageTest.createMessageSuccessful:74 expected:<Message{message_id=2, posted_by=1, message_text='hello message', time_posted_epoch=1669947792}> but was:<Message{message_id=2, posted_by=1, message_text='hello message', time_posted_epoch=1751440118576}>
+[ERROR]   UpdateMessageTextTest.updateMessageSuccessful:65 expected:<200> but was:<400>
+[ERROR]   UserRegistrationTest.registerUserDuplicateUsername:92 expected:<200> but was:<201>
+[ERROR]   UserRegistrationTest.registerUserSuccessful:64 expected:<200> but was:<201>
+[ERROR] Errors:
+[ERROR]   DeleteMessageByMessageIdTest.deleteMessageGivenMessageIdMessageFound:67 » MismatchedInput No content to map due to end-of-input
+ at [Source: (String)""; line: 1, column: 0]
+[INFO]
+[ERROR] Tests run: 23, Failures: 5, Errors: 1, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  36.408 s
+[INFO] Finished at: 2025-07-02T07:09:02Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project Challenges: There are test failures.
+[ERROR]
+[ERROR] Please refer to /workspace/TweetTran-pep-project/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+root@cfa39547c1e8:/workspace/TweetTran-pep-project#

@@ -1,0 +1,6 @@
+
+docker-compose build
+docker-compose run --rm electron-builder
+
+npm install
+electron-builder --windows

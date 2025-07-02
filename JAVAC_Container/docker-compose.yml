@@ -1,6 +1,20 @@
 version: "3.8"
 
 services:
+  db:
+    image: postgres:15
+    container_name: pep_postgres
+    environment:
+      POSTGRES_DB: pep
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - pepnet
+
   javac:
     build:
       context: .
@@ -8,7 +22,15 @@ services:
     container_name: javac_container
     volumes:
       - ./workspace:/workspace
+    working_dir: /workspace
     tty: true
+    depends_on:
+      - db
+    networks:
+      - pepnet
 
 volumes:
-  workspace:
+  pgdata:
+
+networks:
+  pepnet:
