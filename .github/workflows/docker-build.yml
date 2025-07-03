@@ -1,8 +1,15 @@
 ##################################################################
+# GitHub Actions: Docker Build and Push
+#
+# Description:
+#     This workflow builds a Docker image from the Dockerfile 
+#     located in ./JAVAC_Container and pushes it to GitHub 
+#     Container Registry (GHCR). It triggers on all pushes or 
+#     pull requests to any branch.
 #
 # File: docker-build.yml
 # Author: Edward King Fjura
-# Last Updated: 7/2/2025
+# Last Updated: 2025-07-02
 #
 ##################################################################
 
